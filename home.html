@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>DeepGuard | Deepfake Detection</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==================================================
+         HERO
+    =================================================== -->
+
+    <section class="hero">
+
+        <h1>
+            DeepGuard
+        </h1>
+
+        <h2>
+            Deepfake Image Detection
+        </h2>
+
+        <p class="description">
+
+            DeepGuard is an AI-powered deepfake image detection
+            system that uses computer vision and deep learning
+            to analyze images and identify whether they appear
+            real or manipulated.
+
+        </p>
+
+
+        <a
+            href="{{ url_for('detect_page') }}"
+            class="btn"
+        >
+            Analyze Image
+        </a>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         FEATURES
+    =================================================== -->
+
+    <section class="cards">
+
+
+        <div class="card">
+
+            <h3>
+                🤖 AI Powered
+            </h3>
+
+            <p>
+
+                Uses a trained EfficientNet-B0 deep learning
+                model to classify detected facial regions.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <h3>
+                🖼 Image Analysis
+            </h3>
+
+            <p>
+
+                Upload an image and DeepGuard analyzes it
+                automatically to produce a simple result.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <h3>
+                ⚡ Simple Detection
+            </h3>
+
+            <p>
+
+                Get a clear REAL or FAKE prediction without
+                complicated technical information.
+
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==================================================
+         ABOUT
+    =================================================== -->
+
+    <section class="about">
+
+        <h2>
+            About DeepGuard
+        </h2>
+
+        <p>
+
+            DeepGuard was developed as a final-year project
+            to demonstrate the application of artificial
+            intelligence and computer vision in deepfake
+            image detection.
+
+            The system uses an EfficientNet-B0 model trained
+            on real and deepfake facial images. An OpenCV
+            face detector is used to locate faces before
+            classification.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         PROJECT INFORMATION
+    =================================================== -->
+
+    <section class="stats">
+
+
+        <div class="stat-box">
+
+            <h2>
+                EfficientNet-B0
+            </h2>
+
+            <p>
+                Deep Learning Model
+            </p>
+
+        </div>
+
+
+        <div class="stat-box">
+
+            <h2>
+                99.83%
+            </h2>
+
+            <p>
+                Validation Accuracy
+            </p>
+
+        </div>
+
+
+        <div class="stat-box">
+
+            <h2>
+                1920×1080
+            </h2>
+
+            <p>
+                Image Resolution Support
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==================================================
+         FINAL BUTTON
+    =================================================== -->
+
+    <section class="hero">
+
+        <h2>
+            Ready to check an image?
+        </h2>
+
+        <a
+            href="{{ url_for('detect_page') }}"
+            class="btn"
+        >
+            Start Detection
+        </a>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         FOOTER
+    =================================================== -->
+
+    <footer>
+
+        <p>
+            © 2026 DeepGuard
+        </p>
+
+        <p>
+            Deepfake Image Detection Using Deep Learning
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

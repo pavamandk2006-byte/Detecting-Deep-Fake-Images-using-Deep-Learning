@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>DeepGuard | Detection Result</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==================================================
+         RESULT CARD
+    =================================================== -->
+
+    <div class="result-card">
+
+
+        <h1>
+            🔍 Detection Result
+        </h1>
+
+
+        <p class="subtitle">
+
+            DeepGuard has completed the image analysis.
+
+        </p>
+
+
+
+        <!-- ==================================================
+             RESULT IMAGE
+        =================================================== -->
+
+        {% if result.result_image %}
+
+            <img
+                class="result-img"
+                src="{{ url_for(
+                    'result_file',
+                    filename=result.result_image
+                ) }}"
+                alt="DeepGuard detection result"
+            >
+
+        {% endif %}
+
+
+
+        <!-- ==================================================
+             OVERALL RESULT
+        =================================================== -->
+
+        <div
+            class="prediction
+            {% if result.overall_result == 'REAL' %}
+                prediction-real
+            {% else %}
+                prediction-fake
+            {% endif %}"
+        >
+
+
+            {% if result.overall_result == 'REAL' %}
+
+                <div class="result-icon">
+                    ✓
+                </div>
+
+                <h2>
+                    REAL
+                </h2>
+
+                <p>
+                    The image is predicted to be real.
+                </p>
+
+            {% elif result.overall_result == 'FAKE' %}
+
+                <div class="result-icon">
+                    !
+                </div>
+
+                <h2>
+                    FAKE
+                </h2>
+
+                <p>
+                    The image is predicted to be manipulated.
+                </p>
+
+            {% else %}
+
+                <div class="result-icon">
+                    ?
+                </div>
+
+                <h2>
+                    NO FACE DETECTED
+                </h2>
+
+                <p>
+                    No suitable face was detected for analysis.
+                </p>
+
+            {% endif %}
+
+
+        </div>
+
+
+
+        <!-- ==================================================
+             ACTION BUTTONS
+        =================================================== -->
+
+        <div class="result-actions">
+
+
+            <a
+                href="{{ url_for('detect_page') }}"
+                class="btn"
+            >
+
+                Analyze Another Image
+
+            </a>
+
+
+            <a
+                href="{{ url_for('home') }}"
+                class="back-link"
+            >
+
+                ← Back to Home
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,999 @@
+/* =========================================================
+   DEEPGUARD
+   Simple Final Year Project UI
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    color: #172033;
+
+    background:
+        linear-gradient(
+            135deg,
+            #071b3a 0%,
+            #0b315b 45%,
+            #087f86 100%
+        );
+}
+
+
+/* =========================================================
+   GENERAL
+========================================================= */
+
+a {
+    text-decoration: none;
+}
+
+
+button,
+input {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 22px 7%;
+
+    color: white;
+}
+
+
+.logo {
+
+    color: white;
+
+    font-size: 26px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
+
+.home-link {
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    opacity: 0.9;
+
+    transition: 0.2s;
+}
+
+
+.home-link:hover {
+
+    opacity: 1;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    text-align: center;
+
+    color: white;
+
+    padding: 80px 20px 60px;
+}
+
+
+.hero h1 {
+
+    font-size: 58px;
+
+    font-weight: 800;
+
+    margin-bottom: 12px;
+}
+
+
+.hero h2 {
+
+    font-size: 28px;
+
+    font-weight: 500;
+
+    margin-bottom: 22px;
+}
+
+
+.hero .description {
+
+    max-width: 720px;
+
+    margin: 0 auto 30px;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: rgba(
+        255,
+        255,
+        255,
+        0.88
+    );
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.btn {
+
+    display: inline-block;
+
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 14px 28px;
+
+    background: #19b7a5;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s,
+        background 0.2s,
+        box-shadow 0.2s;
+}
+
+
+.btn:hover {
+
+    background: #13a493;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(
+            0,
+            0,
+            0,
+            0.18
+        );
+}
+
+
+.analyze-btn {
+
+    width: 100%;
+
+    margin-top: 20px;
+}
+
+
+/* =========================================================
+   FEATURE CARDS
+========================================================= */
+
+.cards {
+
+    width: 86%;
+
+    max-width: 1100px;
+
+    margin: 20px auto 70px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap: 22px;
+}
+
+
+.card {
+
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 28px;
+
+    text-align: center;
+
+    box-shadow:
+        0 12px 30px
+        rgba(
+            0,
+            0,
+            0,
+            0.12
+        );
+}
+
+
+.card h3 {
+
+    margin-bottom: 14px;
+
+    color: #12345b;
+
+    font-size: 20px;
+}
+
+
+.card p {
+
+    color: #687386;
+
+    line-height: 1.6;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about {
+
+    width: 86%;
+
+    max-width: 900px;
+
+    margin: 0 auto 60px;
+
+    padding: 40px;
+
+    background: white;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    box-shadow:
+        0 12px 30px
+        rgba(
+            0,
+            0,
+            0,
+            0.12
+        );
+}
+
+
+.about h2 {
+
+    color: #12345b;
+
+    margin-bottom: 18px;
+
+    font-size: 30px;
+}
+
+
+.about p {
+
+    color: #687386;
+
+    line-height: 1.8;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   PROJECT STATS
+========================================================= */
+
+.stats {
+
+    width: 86%;
+
+    max-width: 1000px;
+
+    margin: 0 auto 70px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap: 20px;
+}
+
+
+.stat-box {
+
+    background: white;
+
+    border-radius: 14px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 25px
+        rgba(
+            0,
+            0,
+            0,
+            0.10
+        );
+}
+
+
+.stat-box h2 {
+
+    color: #087f86;
+
+    font-size: 24px;
+
+    margin-bottom: 8px;
+}
+
+
+.stat-box p {
+
+    color: #687386;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   UPLOAD PAGE
+========================================================= */
+
+.upload-page {
+
+    min-height: calc(
+        100vh - 160px
+    );
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+
+.upload-card {
+
+    width: 100%;
+
+    max-width: 650px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 42px;
+
+    text-align: center;
+
+    box-shadow:
+        0 18px 45px
+        rgba(
+            0,
+            0,
+            0,
+            0.18
+        );
+}
+
+
+.upload-card h1 {
+
+    color: #12345b;
+
+    font-size: 32px;
+
+    margin-bottom: 12px;
+}
+
+
+.subtitle {
+
+    color: #687386;
+
+    line-height: 1.6;
+
+    margin-bottom: 28px;
+}
+
+
+/* =========================================================
+   UPLOAD BOX
+========================================================= */
+
+.upload-box {
+
+    display: block;
+
+    padding: 38px 25px;
+
+    border: 2px dashed #b9c8d8;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    background: #f8fafc;
+
+    transition:
+        border-color 0.2s,
+        background 0.2s;
+}
+
+
+.upload-box:hover {
+
+    border-color: #19b7a5;
+
+    background: #f2fbfa;
+}
+
+
+.upload-box input {
+
+    display: none;
+}
+
+
+.upload-icon {
+
+    font-size: 42px;
+
+    margin-bottom: 14px;
+}
+
+
+.upload-box h2 {
+
+    color: #18395d;
+
+    font-size: 21px;
+
+    margin-bottom: 8px;
+}
+
+
+.upload-box p {
+
+    color: #718096;
+
+    font-size: 14px;
+
+    margin-bottom: 18px;
+}
+
+
+.file-button {
+
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    background: #19b7a5;
+
+    color: white;
+
+    font-weight: 600;
+
+    font-size: 14px;
+
+    margin-bottom: 14px;
+}
+
+
+.upload-box small {
+
+    display: block;
+
+    color: #8a96a6;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   IMAGE PREVIEW
+========================================================= */
+
+.preview-container {
+
+    display: none;
+
+    margin-top: 25px;
+}
+
+
+.preview-container p {
+
+    color: #18395d;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin-bottom: 12px;
+}
+
+
+.preview-img {
+
+    display: none;
+
+    width: 100%;
+
+    max-height: 420px;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+
+    border: 1px solid #dbe2ea;
+
+    background: #f4f6f8;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.loading {
+
+    display: none;
+
+    margin-top: 18px;
+
+    color: #087f86;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.spinner {
+
+    display: inline-block;
+
+    width: 15px;
+
+    height: 15px;
+
+    border: 2px solid #d6eeee;
+
+    border-top-color: #087f86;
+
+    border-radius: 50%;
+
+    animation:
+        spin 0.8s linear infinite;
+
+    vertical-align: -2px;
+
+    margin-right: 6px;
+}
+
+
+@keyframes spin {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================================================
+   FLASH MESSAGE
+========================================================= */
+
+.flash-message {
+
+    padding: 12px 15px;
+
+    margin-bottom: 20px;
+
+    border-radius: 8px;
+
+    background: #fff1f1;
+
+    color: #b42318;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   UPLOAD INFO
+========================================================= */
+
+.upload-info {
+
+    margin-top: 20px;
+
+    color: #8995a5;
+
+    font-size: 13px;
+}
+
+
+.back-link {
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    color: #087f86;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.back-link:hover {
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   RESULT PAGE
+========================================================= */
+
+.result-card {
+
+    width: 92%;
+
+    max-width: 900px;
+
+    margin: 60px auto;
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    box-shadow:
+        0 18px 45px
+        rgba(
+            0,
+            0,
+            0,
+            0.18
+        );
+}
+
+
+.result-card h1 {
+
+    color: #12345b;
+
+    font-size: 32px;
+
+    margin-bottom: 10px;
+}
+
+
+.result-img {
+
+    display: block;
+
+    width: 100%;
+
+    max-height: 650px;
+
+    object-fit: contain;
+
+    margin: 28px auto;
+
+    border-radius: 12px;
+
+    border: 1px solid #dbe2ea;
+
+    background: #f5f7f9;
+}
+
+
+/* =========================================================
+   PREDICTION
+========================================================= */
+
+.prediction {
+
+    margin: 25px auto;
+
+    padding: 25px;
+
+    border-radius: 14px;
+
+    max-width: 500px;
+}
+
+
+.prediction h2 {
+
+    font-size: 38px;
+
+    margin: 5px 0 8px;
+}
+
+
+.prediction p {
+
+    font-size: 15px;
+
+    color: #687386;
+}
+
+
+.result-icon {
+
+    width: 58px;
+
+    height: 58px;
+
+    margin: 0 auto 10px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 50%;
+
+    color: white;
+
+    font-size: 30px;
+
+    font-weight: 700;
+}
+
+
+/* REAL */
+
+.prediction-real {
+
+    background: #ecfdf3;
+
+    border: 1px solid #b7ebca;
+}
+
+
+.prediction-real h2 {
+
+    color: #087443;
+}
+
+
+.prediction-real .result-icon {
+
+    background: #19a463;
+}
+
+
+/* FAKE */
+
+.prediction-fake {
+
+    background: #fff1f1;
+
+    border: 1px solid #f1c1c1;
+}
+
+
+.prediction-fake h2 {
+
+    color: #b42318;
+}
+
+
+.prediction-fake .result-icon {
+
+    background: #d92d20;
+}
+
+
+/* =========================================================
+   RESULT ACTIONS
+========================================================= */
+
+.result-actions {
+
+    margin-top: 28px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    color: rgba(
+        255,
+        255,
+        255,
+        0.75
+    );
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (
+    max-width: 800px
+) {
+
+    .hero h1 {
+
+        font-size: 44px;
+    }
+
+
+    .hero h2 {
+
+        font-size: 23px;
+    }
+
+
+    .cards {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .stats {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .upload-card {
+
+        padding: 28px 20px;
+    }
+
+
+    .result-card {
+
+        padding: 25px 18px;
+
+        margin-top: 30px;
+    }
+
+}
+
+
+@media (
+    max-width: 500px
+) {
+
+    .site-header {
+
+        padding: 18px 20px;
+    }
+
+
+    .logo {
+
+        font-size: 22px;
+    }
+
+
+    .hero {
+
+        padding-top: 55px;
+    }
+
+
+    .hero h1 {
+
+        font-size: 38px;
+    }
+
+
+    .hero .description {
+
+        font-size: 15px;
+    }
+
+
+    .about {
+
+        padding: 28px 20px;
+    }
+
+
+    .prediction h2 {
+
+        font-size: 32px;
+    }
+
+}

@@ -1,0 +1,19 @@
+{
+    "accuracy": 0.9996714848883048,
+    "precision": 0.9991673605328892,
+    "recall": 1.0,
+    "f1_score": 0.9995835068721366,
+    "confusion_matrix": [
+        [
+            1843,
+            1
+        ],
+        [
+            0,
+            1200
+        ]
+    ],
+    "validation_images": 3044,
+    "real_validation_images": 1844,
+    "fake_validation_images": 1200
+}
